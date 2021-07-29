@@ -1,13 +1,14 @@
 import React from "react";
 import Header from "../components/headers";
 import { Link } from "gatsby";
+import Nav from "../components/Nav"
 
 export default function About() {
   return (
     <div style={{ color: `teal` }}>
-      <Link to="/">Home</Link>
-        <Header headerText="This is great." />
-    <Header headerText="Another Header" />
+      <Nav />
+      <Header headerText="This is great." />
+      <Header headerText="Another Header" />
       <p>Such wow. Very React.</p>
     </div>
   )
