@@ -33,6 +33,7 @@ export default function Nav() {
         <NavContainer>
             <LogoContainer>Logo</LogoContainer>
             <LinksContainer>
+                <StyledLink to="/">Home</StyledLink>
                 <StyledLink to="/about">About</StyledLink>
                 <StyledLink to="/faq">FAQ</StyledLink>
                 <StyledLink to="/contact">Contact</StyledLink>

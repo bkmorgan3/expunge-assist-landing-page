@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "gatsby";
 import styled from "styled-components";
 import Nav from "../components/Nav"
 
@@ -10,6 +9,8 @@ const AppContainer = styled.div`
   flex-direction: column;
   > h1 {
     text-align: center;
+    font-family: 'Roboto';
+    font-weight: 200;
   }
 `;
 
@@ -17,7 +18,6 @@ export default function Home() {
   return (
   <AppContainer>
     <Nav />
-    <Link to="/contact">Contact</Link>
     <h1>Luna is my homie</h1>
     <img src="https://source.unsplash.com/random/400x200" alt="" />
   </AppContainer>

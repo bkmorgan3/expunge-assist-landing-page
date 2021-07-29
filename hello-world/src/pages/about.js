@@ -1,6 +1,5 @@
 import React from "react";
 import Header from "../components/headers";
-import { Link } from "gatsby";
 import Nav from "../components/Nav"
 
 export default function About() {
