@@ -8,12 +8,13 @@ module.exports = {
   /* Your site config here */
   plugins: [
     {
-      resolve: 'gatsby-plugin-web-font-loader',
+      resolve: "gatsby-plugin-web-font-loader",
       options: {
         google: {
-          families: ['Roboto']
-        }
-      }
+          families: ["Roboto", "Mulish"],
+        },
+      },
     },
-    `gatsby-plugin-styled-components`],
+    `gatsby-plugin-styled-components`,
+  ],
 }

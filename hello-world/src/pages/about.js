@@ -1,5 +1,5 @@
-import React from "react";
-import Header from "../components/headers";
+import React from "react"
+import Header from "../components/headers"
 import Nav from "../components/Nav"
 
 export default function About() {
