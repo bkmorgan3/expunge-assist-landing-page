@@ -141,7 +141,7 @@ export default function Contact() {
           >
             <RadioButtonContainer>
               <RadioInputContainer>
-                <input type="radio" name="Interested in PartnerShip" />
+                <input type="radio" name="Interested in Partnership" />
                 <Label>Interested in Partnership?</Label>
               </RadioInputContainer>
               <RadioInputContainer>
