@@ -1,5 +1,6 @@
 import React from "react"
 import Nav from "../components/Nav"
+import Footer from "../components/Footer"
 
 import styled from "styled-components"
 
@@ -7,6 +8,7 @@ const PageContainer = styled.div`
   width: 100%;
   height: 100vh;
   border: 1px solid red;
+  position: relative;
 `
 
 const HelpSection = styled.div`
@@ -36,6 +38,7 @@ export default function FAQ() {
         </TextContainer>
         <ImageContainer>Image</ImageContainer>
       </HelpSection>
+      <Footer />
     </PageContainer>
   )
 }

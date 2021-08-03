@@ -1,17 +1,19 @@
 import React from "react"
-import Header from "../components/headers"
-import Nav from "../components/Nav"
-import ContactImg from "../assets/images/contact.png"
-import "@fontsource/mulish";
-
 import styled from "styled-components"
+import "@fontsource/mulish"
+import ContactImg from "../assets/images/contact.png"
+import Nav from "../components/Nav"
+import Footer from "../components/Footer";
+
 
 const ContactContainer = styled.div`
   width: 100%;
   background-color: #fff;
-  height: 100vh;
+  height: 99vh;
   display: flex;
   flex-direction: column;
+  position: relative;
+  overflow: none;
 `
 
 const HeaderContainer = styled.div`
@@ -20,23 +22,23 @@ const HeaderContainer = styled.div`
   flex-direction: column;
   align-items: center;
   font-size: 1.5em;
-  `
+`
 
 const Headings = styled.h2`
-font-family: "Mulish";
-margin-bottom: 0;
-
-
-`;
+  font-family: "Mulish";
+  color: #373f41;
+  text-align: center;
+`
 
 const ContentContainer = styled.div`
   width: 100%;
   display: flex;
-  height: 50%;
+  height: 60%;
 `
 
 const ImageContainer = styled.div`
   width: 50%;
+  padding-top: 70px;
   `
 const FormContainer = styled.div`
   width: 50%;
@@ -45,19 +47,21 @@ const FormContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  `
+`
 
 const Image = styled.img`
   width: 70%;
+  height: 80%;
   padding-left: 150px;
-  `
+`
 
 const RadioButtonContainer = styled.div`
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
+  padding-left: 125px;
+  margin-bottom: 10px;
 `
-
 const InputContainer = styled.div`
   width: 100%;
   display: flex;
@@ -75,26 +79,46 @@ const Input = styled.input`
 `
 
 const Label = styled.label`
-  font-size: 12px;
+  font-size: 16px;
   line-height: 16px;
-  color: #373F41;
+  color: #373f41;
   margin-bottom: 5px;
-  
+  font-family: "Mulish";
 `
 
 const Textarea = styled.textarea`
   background: #f4f5f4;
   height: 122px;
   width: 447px;
+  border: none;
 `
 
 const InputFieldContainer = styled.div`
   display: flex;
   flex-direction: column;
+  margin-bottom: 10px;
 `
 
 const RadioInputContainer = styled.div`
   display: flex;
+`
+
+const ButtonContainer = styled.div`
+  width: 70% ;
+  display: flex;
+  margin-top: 20px;
+  padding-left: 43px;
+  font-weight: 400;
+`;
+
+const SubmitButton = styled.button`
+  border: none;
+  background-color: #9903ff;
+  color: #fff;
+  height: 38px;
+  border-radius: 5px;
+  width: 130px;
+
 `
 
 export default function Contact() {
@@ -102,8 +126,7 @@ export default function Contact() {
     <ContactContainer>
       <Nav />
       <HeaderContainer>
-        <Headings>Interested in what we're doing ?</Headings>
-        <Headings>
+        <Headings>Interested in what we're doing ? <br />
           Send us an email at <b>info@expungeassist.org</b>
         </Headings>
       </HeaderContainer>
@@ -137,12 +160,18 @@ export default function Contact() {
               </InputFieldContainer>
               <InputFieldContainer>
                 <Label htmlFor="message">Message</Label>
-                <Textarea placeholder="Leave us a note" name="message" />
+                <Textarea name="message" />
               </InputFieldContainer>
+              <ButtonContainer>
+                <SubmitButton type="submit">
+                  Send
+                </SubmitButton>
+              </ButtonContainer>
             </InputContainer>
           </form>
         </FormContainer>
       </ContentContainer>
+      <Footer />
     </ContactContainer>
   )
 }

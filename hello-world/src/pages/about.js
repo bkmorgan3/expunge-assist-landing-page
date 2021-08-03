@@ -1,14 +1,20 @@
 import React from "react"
-import Header from "../components/headers"
+import styled from "styled-components"
 import Nav from "../components/Nav"
+import Footer from "../components/Footer"
+
+const PageContainer = styled.div`
+  width: 100%;
+  position: relative;
+  height: 100vh;
+`
 
 export default function About() {
   return (
-    <div style={{ color: `teal` }}>
+    <PageContainer>
       <Nav />
-      <Header headerText="This is great." />
-      <Header headerText="Another Header" />
-      <p>Such wow. Very React.</p>
-    </div>
+      
+      <Footer />
+    </PageContainer>
   )
 }
