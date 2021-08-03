@@ -141,12 +141,16 @@ export default function Contact() {
           >
             <RadioButtonContainer>
               <RadioInputContainer>
-                <input type="radio" name="Interested in PartnerShip" />
-                <Label>Interested in Partnership?</Label>
+                <input type="radio" name="Interested in Partnership" />
+                <Label htmlFor="Interested in Partnership">
+                  Interested in Partnership?
+                </Label>
               </RadioInputContainer>
               <RadioInputContainer>
                 <input type="radio" name="Interested in Volunteering" />
-                <Label>Interested in Volunteering?</Label>
+                <Label htmlFor="Interested in Volunteering">
+                  Interested in Volunteering?
+                </Label>
               </RadioInputContainer>
             </RadioButtonContainer>
             <InputContainer>
