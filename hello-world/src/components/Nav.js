@@ -8,6 +8,7 @@ const NavContainer = styled.div`
   height: 3em;
   display: flex;
   margin-top: 15px;
+  background-color: #fffffc;
 `
 
 const LogoContainer = styled.div`
