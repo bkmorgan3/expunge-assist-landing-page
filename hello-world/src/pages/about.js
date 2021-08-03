@@ -13,7 +13,7 @@ export default function About() {
   return (
     <PageContainer>
       <Nav />
-      
+
       <Footer />
     </PageContainer>
   )

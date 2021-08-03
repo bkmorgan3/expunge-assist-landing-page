@@ -3,8 +3,7 @@ import styled from "styled-components"
 import "@fontsource/mulish"
 import ContactImg from "../assets/images/contact.png"
 import Nav from "../components/Nav"
-import Footer from "../components/Footer";
-
+import Footer from "../components/Footer"
 
 const ContactContainer = styled.div`
   width: 100%;
@@ -39,7 +38,7 @@ const ContentContainer = styled.div`
 const ImageContainer = styled.div`
   width: 50%;
   padding-top: 70px;
-  `
+`
 const FormContainer = styled.div`
   width: 50%;
   margin-right: 10px;
@@ -101,15 +100,16 @@ const InputFieldContainer = styled.div`
 
 const RadioInputContainer = styled.div`
   display: flex;
+  margin-right: 30px;
 `
 
 const ButtonContainer = styled.div`
-  width: 70% ;
+  width: 70%;
   display: flex;
   margin-top: 20px;
   padding-left: 43px;
   font-weight: 400;
-`;
+`
 
 const SubmitButton = styled.button`
   border: none;
@@ -118,7 +118,6 @@ const SubmitButton = styled.button`
   height: 38px;
   border-radius: 5px;
   width: 130px;
-
 `
 
 export default function Contact() {
@@ -126,7 +125,8 @@ export default function Contact() {
     <ContactContainer>
       <Nav />
       <HeaderContainer>
-        <Headings>Interested in what we're doing ? <br />
+        <Headings>
+          Interested in what we're doing ? <br />
           Send us an email at <b>info@expungeassist.org</b>
         </Headings>
       </HeaderContainer>
@@ -137,15 +137,15 @@ export default function Contact() {
         <FormContainer>
           <form
             action="https://getform.io/f/c2344ce2-c2ca-4fce-ba76-1bdefd869586"
-            method="post"
+            method="POST"
           >
             <RadioButtonContainer>
               <RadioInputContainer>
-                <input type="radio" />
+                <input type="radio" name="Interested in PartnerShip" />
                 <Label>Interested in Partnership?</Label>
               </RadioInputContainer>
               <RadioInputContainer>
-                <input type="radio" />
+                <input type="radio" name="Interested in Volunteering" />
                 <Label>Interested in Volunteering?</Label>
               </RadioInputContainer>
             </RadioButtonContainer>
@@ -163,9 +163,7 @@ export default function Contact() {
                 <Textarea name="message" />
               </InputFieldContainer>
               <ButtonContainer>
-                <SubmitButton type="submit">
-                  Send
-                </SubmitButton>
+                <SubmitButton type="submit">Send</SubmitButton>
               </ButtonContainer>
             </InputContainer>
           </form>

@@ -1,7 +1,7 @@
 import React, { useEffect } from "react"
 import styled from "styled-components"
 import Nav from "../components/Nav"
-import Footer from "../components/Footer";
+import Footer from "../components/Footer"
 
 const AppContainer = styled.div`
   width: 100%;
