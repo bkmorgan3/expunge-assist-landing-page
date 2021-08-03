@@ -19,14 +19,14 @@ const LogoContainer = styled.div`
 
 const LinksContainer = styled.div`
   width: 50%;
-  border: 3px solid teal;
   display: flex;
-  padding-top: 0.5em;
+  padding-top: 10px;
 `
 
 const StyledLink = styled(Link)`
   &&&& {
-    margin: 3px;
+    margin: 0 10px;
+    text-decoration: none;
   }
 `
 
