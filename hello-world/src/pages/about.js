@@ -7,6 +7,8 @@ const PageContainer = styled.div`
   width: 100%;
   position: relative;
   height: 100vh;
+  padding: 0;
+  margin: 0;
 `
 
 export default function About() {
