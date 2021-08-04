@@ -10,7 +10,7 @@ const FooterContainer = styled.div`
   display: flex;
   background-color: #efd8ff;
   height: 70px;
-  margin: 0;
+  margin-top: 20px;
   padding: 0;
 `
 

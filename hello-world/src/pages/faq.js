@@ -5,6 +5,8 @@ import Footer from "../components/Footer"
 
 import FAQImg from "../assets/images/FAQ.png"
 import "@fontsource/mulish"
+import { ImageContainer, FormContainer } from "./contact"
+import ContactImg from "../assets/images/contact.png"
 
 const PageContainer = styled.div`
   width: 100%;
@@ -27,7 +29,7 @@ const TextContainer = styled.div`
   width: 50%;
 `
 
-const ImageContainer = styled.div`
+const FAQImageContainer = styled.div`
   width: 50%;
 `
 
@@ -94,6 +96,18 @@ const CourtLink = styled.a`
   }
 `
 
+const ContactUsContainer = styled.div`
+  width: 95%;
+  border: 8px solid rgba(245, 170, 4, 0.43);
+  height: 500px;
+  margin-bottom: 150px;
+  border-radius: 10px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+`
+
 export default function FAQ() {
   return (
     <PageContainer>
@@ -105,9 +119,9 @@ export default function FAQ() {
 
           <FAQSText>Below is a list of commonly asked questions.</FAQSText>
         </TextContainer>
-        <ImageContainer>
+        <FAQImageContainer>
           <Image src={FAQImg} alt="people asking questions" />
-        </ImageContainer>
+        </FAQImageContainer>
       </HelpSection>
       <QuestionSection>
         <QAContainer>
@@ -189,7 +203,16 @@ export default function FAQ() {
           </AnswerText>
         </QAContainer>
       </QuestionSection>
-      <Footer />
+      <ContactUsContainer>
+        <SubHeading>
+          Didn’t find what you were looking for? Send us a message!
+        </SubHeading>
+        <FormContainer>FORM</FormContainer>
+        <ImageContainer>
+          <Image src={ContactImg} alt=" man" />
+        </ImageContainer>
+      </ContactUsContainer>
+      {/* <Footer /> */}
     </PageContainer>
   )
 }

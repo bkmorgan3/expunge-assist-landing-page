@@ -35,11 +35,11 @@ const ContentContainer = styled.div`
   height: 60%;
 `
 
-const ImageContainer = styled.div`
+export const ImageContainer = styled.div`
   width: 50%;
   padding-top: 70px;
 `
-const FormContainer = styled.div`
+export const FormContainer = styled.div`
   width: 50%;
   margin-right: 10px;
   padding-right: 150px;
