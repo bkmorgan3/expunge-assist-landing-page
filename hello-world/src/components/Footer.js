@@ -5,7 +5,7 @@ import { Link } from "gatsby"
 
 const FooterContainer = styled.div`
   width: 100%;
-  /* position: absolute; */
+  position: absolute;
   bottom: 0;
   display: flex;
   background-color: #efd8ff;

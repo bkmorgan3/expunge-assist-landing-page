@@ -8,7 +8,7 @@ import Footer from "../components/Footer"
 const ContactContainer = styled.div`
   width: 100%;
   background-color: #fff;
-  height: 99vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   position: relative;

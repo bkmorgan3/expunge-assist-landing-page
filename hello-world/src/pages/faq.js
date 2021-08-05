@@ -5,7 +5,6 @@ import Footer from "../components/Footer"
 
 import FAQImg from "../assets/images/FAQ.png"
 import "@fontsource/mulish"
-import { ImageContainer, FormContainer } from "./contact"
 import ContactImg from "../assets/images/contact.png"
 
 const PageContainer = styled.div`
@@ -33,10 +32,6 @@ const FAQImageContainer = styled.div`
   width: 50%;
 `
 
-const Image = styled.img`
-  width: 100%;
-`
-
 const Heading = styled.h2`
   font-family: "mulish";
   padding-left: 65px;
@@ -47,6 +42,10 @@ const SubHeading = styled.h3`
   font-family: "mulish";
   padding-left: 65px;
   font-size: 2em;
+`
+
+const StyledSubHeading = styled(SubHeading)`
+  text-align: center;
 `
 
 const FAQSText = styled.p`
@@ -106,6 +105,86 @@ const ContactUsContainer = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
+`
+
+const FormContainer = styled.div`
+  width: 50%;
+  margin-right: 10px;
+  padding-right: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`
+
+const FormLayoutContainer = styled.div`
+  display: flex;
+  width: 100%;
+`
+
+const ImageContainer = styled.div`
+  width: 50%;
+  padding-top: 50px;
+`
+
+const Image = styled.img`
+  width: 80%;
+  height: 85%;
+`
+
+const InputContainer = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`
+
+const InputFieldContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  width: 542px;
+`
+
+const Input = styled.input`
+  border: none;
+  background: #f4f5f4;
+  height: 42px;
+`
+
+const Label = styled.label`
+  font-size: 16px;
+  line-height: 16px;
+  color: #373f41;
+  margin-bottom: 5px;
+  font-family: "Mulish";
+`
+
+const ButtonContainer = styled.div`
+  width: 70%;
+  display: flex;
+  margin-top: 20px;
+  font-weight: 400;
+`
+
+const SubmitButton = styled.button`
+  border: none;
+  background-color: #9903ff;
+  color: #fff;
+  height: 38px;
+  border-radius: 5px;
+  width: 100%;
+`
+
+const StyledFooter = styled(Footer)`
+  && {
+    position: static;
+  }
+`
+
+const Spacer = styled.div`
+  width: 100%;
+  height: 80px;
 `
 
 export default function FAQ() {
@@ -205,14 +284,41 @@ export default function FAQ() {
       </QuestionSection>
       <ContactUsContainer>
         <SubHeading>
-          Didn’t find what you were looking for? Send us a message!
+          Didn’t find what you were looking for? &nbsp; &nbsp; Send us a
+          message!
         </SubHeading>
-        <FormContainer>FORM</FormContainer>
-        <ImageContainer>
-          <Image src={ContactImg} alt=" man" />
-        </ImageContainer>
+        <FormLayoutContainer>
+          <FormContainer>
+            <form
+              action="https://getform.io/f/c2344ce2-c2ca-4fce-ba76-1bdefd869586"
+              method="POST"
+            >
+              <InputContainer>
+                <InputFieldContainer>
+                  <Label htmlFor="name">Name</Label>
+                  <Input type="text" name="name" />
+                </InputFieldContainer>
+                <InputFieldContainer>
+                  <Label htmlFor="email">Email</Label>
+                  <Input type="email" name="email" />
+                </InputFieldContainer>
+                <InputFieldContainer>
+                  <Label htmlFor="question">Question</Label>
+                  <Input name="question" />
+                </InputFieldContainer>
+                <ButtonContainer>
+                  <SubmitButton type="submit">Send</SubmitButton>
+                </ButtonContainer>
+              </InputContainer>
+            </form>
+          </FormContainer>
+          <ImageContainer>
+            <Image src={ContactImg} alt="a man walking" />
+          </ImageContainer>
+        </FormLayoutContainer>
       </ContactUsContainer>
-      {/* <Footer /> */}
+      <Spacer />
+      <StyledFooter />
     </PageContainer>
   )
 }
