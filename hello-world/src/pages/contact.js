@@ -35,11 +35,11 @@ const ContentContainer = styled.div`
   height: 60%;
 `
 
-export const ImageContainer = styled.div`
+const ImageContainer = styled.div`
   width: 50%;
   padding-top: 70px;
 `
-export const FormContainer = styled.div`
+const FormContainer = styled.div`
   width: 50%;
   margin-right: 10px;
   padding-right: 150px;
@@ -70,7 +70,6 @@ const InputContainer = styled.div`
 `
 
 const Input = styled.input`
-  height: 20px;
   border: none;
   background: #f4f5f4;
   height: 42px;
