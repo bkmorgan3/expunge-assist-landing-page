@@ -10,13 +10,15 @@ const FooterContainer = styled.div`
   display: flex;
   background-color: #efd8ff;
   height: 70px;
+  margin-top: 20px;
+  padding: 0;
 `
 
 const LogoContainer = styled.div`
   width: 50%;
   display: flex;
   justify-content: flex-start;
-  padding-left: 120px;
+  padding-left: 30px;
 `
 
 const LinksContainer = styled.div`
