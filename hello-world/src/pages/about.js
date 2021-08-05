@@ -4,6 +4,7 @@ import Nav from "../components/Nav"
 import Footer from "../components/Footer"
 
 import mission from "../assets/images/mission.png"
+import history from "../assets/images/history.png"
 import "@fontsource/mulish"
 
 const PageContainer = styled.div`
@@ -19,13 +20,13 @@ const MissionContainer = styled.div`
   background-color: #fffaf2;
   height: 350px;
   display: flex;
-`;
+`
 
 const MissionTextContainer = styled.div`
   width: 50%;
   padding-left: 65px;
   margin-top: 20px;
-`;
+`
 
 const ImageContainer = styled.div`
   width: 40%;
@@ -42,7 +43,7 @@ const MissionStatement = styled.p`
   line-height: 1.4em;
   font-weight: 400;
   padding-right: 60px;
-`;
+`
 
 const Image = styled.img`
   height: 100%;
@@ -50,11 +51,55 @@ const Image = styled.img`
 
 const ButtonContainer = styled.div`
   width: 100%;
+  display: flex;
+  justify-content: flex-start;
 `
 
 const VolunteerButton = styled.button`
-  background-color: #F8CD58;
+  background-color: #f8cd58;
   height: 51px;
+  border-radius: 8px;
+  padding: 12px 18px;
+  letter-spacing: 2px;
+  font-size: 16px;
+  border: none;
+
+  &:hover {
+    cursor: pointer;
+    border: none;
+    background-color: dodgerblue;
+    color: #fff;
+  }
+`
+
+const PartnerButton = styled.button`
+  background-color: #9903ff;
+  border-radius: 8px;
+  padding: 12px 18px;
+  margin-left: 100px;
+  color: #fff;
+  font-size: 16px;
+  font-family: "mulish";
+  letter-spacing: 2px;
+  line-height: 18px;
+
+  &:hover {
+    background-color: #c5b3d1;
+    cursor: pointer;
+    border: none;
+    color: #000;
+  }
+`
+
+const HistorySection = styled.div`
+  width: 100%;
+  background-color: #f9f1ff;
+  height: 400px;
+  display: flex;
+`
+
+const TextContainer = styled.div`
+  width: 50%;
 `
 
 export default function About() {
@@ -63,20 +108,27 @@ export default function About() {
       <Nav />
       <MissionContainer>
         <MissionTextContainer>
-          <Heading>
-            Our Mission
-          </Heading>
+          <Heading>Our Mission</Heading>
           <MissionStatement>
-            Expunge Assist (formerly known as the Record Clearance Project) is a project of Hack for LA.  Expunge Assist helps people in California with criminal records accomplish record clearance, expungement or reduction as a result of Prop 47 & Prop 64.
+            Expunge Assist (formerly known as the Record Clearance Project) is a
+            project of Hack for LA. Expunge Assist helps people in California
+            with criminal records accomplish record clearance, expungement or
+            reduction as a result of Prop 47 & Prop 64.
           </MissionStatement>
           <ButtonContainer>
             <VolunteerButton>Volunteer With Us</VolunteerButton>
+            <PartnerButton>Become a Partner</PartnerButton>
           </ButtonContainer>
         </MissionTextContainer>
         <ImageContainer>
           <Image src={mission} alt="success image" />
         </ImageContainer>
       </MissionContainer>
+      <HistorySection>
+        <ImageContainer>
+          <Image src={history} alt="woman shouting into megaphone" />
+        </ImageContainer>
+      </HistorySection>
       <Footer />
     </PageContainer>
   )
