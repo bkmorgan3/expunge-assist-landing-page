@@ -94,7 +94,7 @@ const PartnerButton = styled.button`
 const HistorySection = styled.div`
   width: 100%;
   background-color: #f9f1ff;
-  height: 400px;
+  height: 450px;
   display: flex;
 `
 
@@ -106,6 +106,7 @@ export default function About() {
   return (
     <PageContainer>
       <Nav />
+
       <MissionContainer>
         <MissionTextContainer>
           <Heading>Our Mission</Heading>
@@ -124,11 +125,36 @@ export default function About() {
           <Image src={mission} alt="success image" />
         </ImageContainer>
       </MissionContainer>
+
       <HistorySection>
         <ImageContainer>
           <Image src={history} alt="woman shouting into megaphone" />
         </ImageContainer>
+
+        <TextContainer>
+          <Heading>Our History</Heading>
+
+          <MissionStatement>
+            Record clearance or reduction in California is possible as a result
+            of legislation which includes Prop 64 & Prop 47.
+          </MissionStatement>
+
+          <MissionStatement>
+            Community organizers and non-profits are already working in this
+            space to clear records for millions of eligible cases.
+          </MissionStatement>
+          <MissionStatement>
+            New legislation under AB 1793 has initiated the process of
+            automation for many of these records.
+          </MissionStatement>
+
+          <MissionStatement>
+            Still, many Californians will still have to submit a petition to
+            have their record cleared.
+          </MissionStatement>
+        </TextContainer>
       </HistorySection>
+
       <Footer />
     </PageContainer>
   )
