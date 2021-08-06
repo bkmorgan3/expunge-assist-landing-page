@@ -123,6 +123,7 @@ const AccomplishedHeading = styled(Heading)`
 const RowContainer = styled.div`
   width: 100%;
   display: flex;
+  margin-bottom: 10px;
 `
 
 const CheckmarkContainer = styled.div`
@@ -138,6 +139,41 @@ const Checkbox = styled(Image)`
     padding-left: 350px;
     height: 100px;
   }
+`
+
+const JoinContainer = styled.div`
+  width: 100%;
+  min-height: 400px;
+  background-color: #fff;
+`
+
+const JoinHeadingContainer = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 50px;
+`
+
+const JoinHeading = styled(Heading)`
+  && {
+    color: #3b065a;
+  }
+`
+
+const JoinTextContainer = styled.div`
+  width: 60%;
+  margin: 0 auto;
+`
+
+const JoinStatement = styled.p`
+  color: #222;
+  font-size: 1.8em;
+  font-family: "mulish";
+  line-height: 50px;
+  text-align: center;
+  padding-bottom: 50px;
 `
 
 export default function About() {
@@ -235,6 +271,19 @@ export default function About() {
           </RowContainer>
         </HeadingContainer>
       </AccomplishmentContainer>
+      <JoinContainer>
+        <JoinHeadingContainer>
+          <JoinHeading>Join Our Mission</JoinHeading>
+          <JoinTextContainer>
+            <JoinStatement>
+              Our goal is to create a tool that can be used by anyone creating
+              personal statement generators for record clearance. Partner with
+              us on our mission to help the 200,000+ residents of LA county who
+              are eligible for record clearance and help provide a second chance
+            </JoinStatement>
+          </JoinTextContainer>
+        </JoinHeadingContainer>
+      </JoinContainer>
       <Footer />
     </PageContainer>
   )
