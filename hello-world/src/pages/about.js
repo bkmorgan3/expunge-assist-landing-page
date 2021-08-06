@@ -2,10 +2,18 @@ import React, { useEffect } from "react"
 import styled from "styled-components"
 import Nav from "../components/Nav"
 import Footer from "../components/Footer"
+import Profile from "../components/Profile"
 
 import mission from "../assets/images/mission.png"
 import history from "../assets/images/history.png"
 import checkmark from "../assets/images/checkmark.png"
+import Gretchen from "../assets/images/Gretchen.png"
+import Apurva from "../assets/images/Apurva.png"
+import Tierney from "../assets/images/Tierney.png"
+import Andan from "../assets/images/Andan.png";
+import Ryan from "../assets/images/Ryan1.png";
+import NanaYaa from "../assets/images/NanaYaa.png";
+import Brad from "../assets/images/Brad.png";
 import "@fontsource/mulish"
 
 const PageContainer = styled.div`
@@ -176,6 +184,26 @@ const JoinStatement = styled.p`
   padding-bottom: 50px;
 `
 
+const TeamContainer = styled.div`
+  width: 100%;
+  min-height: 500px;
+  background-color: #fffaf2;
+`;
+
+const TeamHeadingContainer = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 25px;
+`
+
+const TeamRowContainer = styled.div`
+  width: 100%;
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-evenly;
+`
+
 export default function About() {
   useEffect(() => {
     document.title = "About Us"
@@ -284,6 +312,25 @@ export default function About() {
           </JoinTextContainer>
         </JoinHeadingContainer>
       </JoinContainer>
+      <TeamContainer>
+        <TeamHeadingContainer>
+          <Heading>
+            Meet the UX Design & Development Team
+          </Heading>
+        </TeamHeadingContainer>
+        <TeamRowContainer>
+          <Profile name="Gretchen Howard" title="Product Manager" image={Gretchen} />
+          <Profile name="Apurva" title=" UX Research Lead" image={Apurva} />
+          <Profile name="Tierney Sadowski" title="Product Manager" image={Tierney} />
+        </TeamRowContainer>
+        <TeamRowContainer>
+          <Profile name="Andan Eddy" title="Product Manager" image={Andan} />
+          <Profile name="Ryan Curtis" title="UX / UI Designer" image={Ryan} />
+          <Profile name=" Nana Yaa Ansah" title="UX / UI Designer" image={NanaYaa} />
+          <Profile name="Brad Morgan" title="Web Developer" image={Brad} />
+        </TeamRowContainer>
+        
+      </TeamContainer>
       <Footer />
     </PageContainer>
   )
