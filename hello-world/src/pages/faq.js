@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import styled from "styled-components"
 import Nav from "../components/Nav"
 import Footer from "../components/Footer"
@@ -16,7 +16,7 @@ const PageContainer = styled.div`
 const HelpSection = styled.div`
   width: 100%;
   min-height: 30%;
-  background-color: #fffaf2;
+  background-color: #fff;
   display: flex;
   margin: 0;
   height: 551px;
@@ -188,6 +188,9 @@ const Spacer = styled.div`
 `
 
 export default function FAQ() {
+  useEffect(() => {
+    document.title = "FAQs"
+  })
   return (
     <PageContainer>
       <Nav />
