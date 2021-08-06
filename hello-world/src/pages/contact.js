@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import styled from "styled-components"
 import "@fontsource/mulish"
 import ContactImg from "../assets/images/contact.png"
@@ -121,6 +121,9 @@ const SubmitButton = styled.button`
 `
 
 export default function Contact() {
+  useEffect(() => {
+    document.title = "Contact Us"
+  })
   return (
     <ContactContainer>
       <Nav />

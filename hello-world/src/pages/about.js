@@ -1,10 +1,11 @@
-import React from "react"
+import React, { useEffect } from "react"
 import styled from "styled-components"
 import Nav from "../components/Nav"
 import Footer from "../components/Footer"
 
 import mission from "../assets/images/mission.png"
 import history from "../assets/images/history.png"
+import checkmark from "../assets/images/checkmark.png"
 import "@fontsource/mulish"
 
 const PageContainer = styled.div`
@@ -102,7 +103,47 @@ const TextContainer = styled.div`
   width: 50%;
 `
 
+const AccomplishmentContainer = styled.div`
+  width: 100%;
+  background-color: #fffaf2;
+  min-height: 400px;
+`
+
+const HeadingContainer = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`
+
+const AccomplishedHeading = styled(Heading)`
+  font-weight: bold;
+`
+const RowContainer = styled.div`
+  width: 100%;
+  display: flex;
+`
+
+const CheckmarkContainer = styled.div`
+  width: 30%;
+`
+
+const AccomplishedTextContainer = styled.div`
+  width: 55%;
+`
+
+const Checkbox = styled(Image)`
+  && {
+    padding-left: 350px;
+    height: 100px;
+  }
+`
+
 export default function About() {
+  useEffect(() => {
+    document.title = "About Us"
+  })
   return (
     <PageContainer>
       <Nav />
@@ -154,7 +195,46 @@ export default function About() {
           </MissionStatement>
         </TextContainer>
       </HistorySection>
-
+      <AccomplishmentContainer>
+        <HeadingContainer>
+          <AccomplishedHeading>
+            What We've Accomplished So Far
+          </AccomplishedHeading>
+          <RowContainer>
+            <CheckmarkContainer>
+              <Checkbox src={checkmark} alt="Checkmark" />
+            </CheckmarkContainer>
+            <AccomplishedTextContainer>
+              <MissionStatement>
+                Record clearance or reduction in California is possible as a
+                result of legislation which includes Prop 64 & Prop 47.
+              </MissionStatement>
+            </AccomplishedTextContainer>
+          </RowContainer>
+          <RowContainer>
+            <CheckmarkContainer>
+              <Checkbox src={checkmark} alt="Checkmark" />
+            </CheckmarkContainer>
+            <AccomplishedTextContainer>
+              <MissionStatement>
+                Record clearance or reduction in California is possible as a
+                result of legislation which includes Prop 64 & Prop 47.
+              </MissionStatement>
+            </AccomplishedTextContainer>
+          </RowContainer>
+          <RowContainer>
+            <CheckmarkContainer>
+              <Checkbox src={checkmark} alt="Checkmark" />
+            </CheckmarkContainer>
+            <AccomplishedTextContainer>
+              <MissionStatement>
+                Record clearance or reduction in California is possible as a
+                result of legislation which includes Prop 64 & Prop 47.
+              </MissionStatement>
+            </AccomplishedTextContainer>
+          </RowContainer>
+        </HeadingContainer>
+      </AccomplishmentContainer>
       <Footer />
     </PageContainer>
   )
