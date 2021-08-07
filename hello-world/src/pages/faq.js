@@ -16,7 +16,7 @@ const PageContainer = styled.div`
 const HelpSection = styled.div`
   width: 100%;
   min-height: 30%;
-  background-color: #fff;
+  background-color: #fffaf2;
   display: flex;
   margin: 0;
   height: 551px;
