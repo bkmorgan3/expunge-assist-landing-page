@@ -44,10 +44,6 @@ const SubHeading = styled.h3`
   font-size: 2em;
 `
 
-const StyledSubHeading = styled(SubHeading)`
-  text-align: center;
-`
-
 const FAQSText = styled.p`
   font-family: "mulish";
   padding-left: 65px;
