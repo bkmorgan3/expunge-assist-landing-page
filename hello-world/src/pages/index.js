@@ -90,6 +90,7 @@ const PartnerForm = styled.div`
   border: 8px solid rgba(245, 179, 4, 0.66);
   background-color: #fffaf2;
   font-size: 1.6em;
+  padding-bottom: 10px;
 `
 
 const HeadingContainer = styled.div`
@@ -103,8 +104,8 @@ const PartnerFormHeading = styled.h2`
 
 const WhyPartnersContainer = styled.div`
   width: 100%;
-  border: 1px solid red;
-  height: 300px;
+  height: 400px;
+  display: flex;
 `
 
 const PartnerMissionContainer = styled.div`
@@ -130,6 +131,7 @@ const PartnerTextAction = styled.span`
 const Form = styled.form`
   display: flex;
   justify-content: space-evenly;
+  padding-top: 20px;
 `
 
 const Input = styled.input`
@@ -137,6 +139,7 @@ const Input = styled.input`
   background: #fff;
   height: 42px;
   width: 447px;
+  border-radius: 8px;
 `
 
 const Label = styled.label`
@@ -149,12 +152,31 @@ const Label = styled.label`
 
 const SubmitButton = styled.button`
   border: none;
-  border-radius: 2px;
+  border-radius: 8px;
   background-color: #9903ff;
   width: 152px;
   height: 47px;
   color: #fff;
   font-size: 0.8em;
+`
+
+const HorizontalPurpleBand = styled.div`
+  width: 100%;
+  background-color: rgba(153, 3, 255, 0.5);
+  height: 34px;
+`
+
+const WhyPartnerFieldContainer = styled.div`
+  width: 50%;
+`
+
+const WhyPartnerField = styled.div`
+  border: 8px solid rgba(153, 3, 255, 0.5);
+  height: 374px;
+  background-color: #fffaf2;
+  border-radius: 8px;
+  width: 700px;
+  margin-left: 30px;
 `
 
 export default function Home() {
@@ -205,7 +227,7 @@ export default function Home() {
               <Form action="#" method="POST">
                 <Label htmlFor="signup"></Label>
                 <Input
-                  placeholder="name@domain.com"
+                  placeholder="yourname@domain.com"
                   name="signup"
                   type="email"
                 ></Input>
@@ -213,9 +235,14 @@ export default function Home() {
               </Form>
             </PartnerForm>
           </PartnerFormContainer>
-          <ColorsContainer></ColorsContainer>
+          <ColorsContainer />
         </PartnersFormSection>
-        <WhyPartnersContainer></WhyPartnersContainer>
+        <WhyPartnersContainer>
+          <ColorsContainer></ColorsContainer>
+          <WhyPartnerFieldContainer>
+            <WhyPartnerField></WhyPartnerField>
+          </WhyPartnerFieldContainer>
+        </WhyPartnersContainer>
         <PartnerMissionContainer></PartnerMissionContainer>
       </PartnersContainer>
       <Footer />
