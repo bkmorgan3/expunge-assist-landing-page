@@ -77,11 +77,6 @@ const PartnerFormContainer = styled.div`
   width: 60%;
 `
 
-const ColorsContainer = styled.div`
-  width: 50%;
-  border: 1px solid red;
-`
-
 const PartnerForm = styled.div`
   height: 375px;
   width: 700px;
@@ -178,7 +173,6 @@ const VerticalYellowBand = styled.div`
 
 const WhyPartnerFieldContainer = styled.div`
   width: 50%;
-  border: 1px solid black;
 `
 
 const WhyPartnerField = styled.div`
@@ -187,7 +181,6 @@ const WhyPartnerField = styled.div`
   background-color: #fffaf2;
   border-radius: 8px;
   width: 700px;
-  margin-left: 30px;
   font-size: 1.6em;
 `
 
