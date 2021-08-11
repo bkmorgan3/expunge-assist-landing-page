@@ -71,6 +71,7 @@ const PartnersFormSection = styled.div`
   width: 100%;
   height: 500px;
   display: flex;
+  border: 1px solid red;
 `
 
 const PartnerFormContainer = styled.div`
@@ -164,6 +165,15 @@ const HorizontalPurpleBand = styled.div`
   width: 100%;
   background-color: rgba(153, 3, 255, 0.5);
   height: 34px;
+  margin-top: 240px;
+`
+
+const VerticalYellowBand = styled.div`
+  width: 34px;
+  background-color: rgba(248, 203, 85, 0.66);
+  height: 500px;
+  position: absolute;
+  left: 1000px;
 `
 
 const WhyPartnerFieldContainer = styled.div`
@@ -235,7 +245,8 @@ export default function Home() {
               </Form>
             </PartnerForm>
           </PartnerFormContainer>
-          <ColorsContainer />
+          <HorizontalPurpleBand></HorizontalPurpleBand>
+          <VerticalYellowBand />
         </PartnersFormSection>
         <WhyPartnersContainer>
           <ColorsContainer></ColorsContainer>
