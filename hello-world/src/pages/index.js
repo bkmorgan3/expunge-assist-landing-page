@@ -71,7 +71,6 @@ const PartnersFormSection = styled.div`
   width: 100%;
   height: 500px;
   display: flex;
-  border: 1px solid red;
 `
 
 const PartnerFormContainer = styled.div`
@@ -79,7 +78,8 @@ const PartnerFormContainer = styled.div`
 `
 
 const ColorsContainer = styled.div`
-  width: 40%;
+  width: 50%;
+  border: 1px solid red;
 `
 
 const PartnerForm = styled.div`
@@ -178,6 +178,7 @@ const VerticalYellowBand = styled.div`
 
 const WhyPartnerFieldContainer = styled.div`
   width: 50%;
+  border: 1px solid black;
 `
 
 const WhyPartnerField = styled.div`
@@ -187,6 +188,36 @@ const WhyPartnerField = styled.div`
   border-radius: 8px;
   width: 700px;
   margin-left: 30px;
+  font-size: 1.6em;
+`
+
+const PartnerHeaderContainer = styled.div`
+  width: 100%;
+  padding-top: 10px;
+  margin-left: 80px;
+`
+
+const HeadOverTextContainer = styled.div`
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  padding-left: 20px;
+`
+
+const HorizontalYellowBand = styled.div`
+  width: 100%;
+  background-color: rgba(248, 203, 85, 0.66);
+  height: 34px;
+  margin-top: 240px;
+`
+
+const VerticalPurpleBand = styled.div`
+  width: 34px;
+  background-color: rgba(153, 3, 255, 0.5);
+  height: 480px;
+  position: absolute;
+  left: 440px;
+  top: 1044px;
 `
 
 export default function Home() {
@@ -245,13 +276,30 @@ export default function Home() {
               </Form>
             </PartnerForm>
           </PartnerFormContainer>
-          <HorizontalPurpleBand></HorizontalPurpleBand>
+          <HorizontalPurpleBand />
           <VerticalYellowBand />
         </PartnersFormSection>
         <WhyPartnersContainer>
-          <ColorsContainer></ColorsContainer>
+          <VerticalPurpleBand />
+          <HorizontalYellowBand />
+
           <WhyPartnerFieldContainer>
-            <WhyPartnerField></WhyPartnerField>
+            <WhyPartnerField>
+              <PartnerHeaderContainer>
+                <PartnerFormHeading>
+                  Why <PurpledLetters>Partner</PurpledLetters> with us?
+                </PartnerFormHeading>
+              </PartnerHeaderContainer>
+              <PartnerFormText>Lorem Ipsum</PartnerFormText>
+              <PartnerFormText>Lorem Ipsum</PartnerFormText>
+              <PartnerFormText>Lorem Ipsum</PartnerFormText>
+              <HeadOverTextContainer>
+                <PartnerTextAction>
+                  Head over to our about page to find out more about our goal to
+                  help improve the record clearance process.
+                </PartnerTextAction>
+              </HeadOverTextContainer>
+            </WhyPartnerField>
           </WhyPartnerFieldContainer>
         </WhyPartnersContainer>
         <PartnerMissionContainer></PartnerMissionContainer>
