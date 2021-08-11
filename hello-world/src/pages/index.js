@@ -4,6 +4,9 @@ import Nav from "../components/Nav"
 import Footer from "../components/Footer"
 
 import laptop from "../assets/images/laptop.png"
+import step1 from "../assets/images/step1.png"
+import step2 from "../assets/images/step2.png"
+import step3 from "../assets/images/step3.png"
 
 const AppContainer = styled.div`
   width: 100%;
@@ -116,7 +119,7 @@ const WhyPartnersContainer = styled.div`
 
 const PartnerMissionContainer = styled.div`
   width: 100%;
-  height: 600px;
+  height: 480px;
   position: relative;
 `
 
@@ -256,6 +259,53 @@ const LightPurpleBand = styled.div`
   z-index: 2;
 `
 
+const HowItWorksSection = styled.div`
+  width: 100%;
+  height: 600px;
+  background-color: #fff;
+`
+
+const HowItWorksHeaderContainer = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  font-size: 1.6em;
+`
+
+const HowItWorksHeader = styled.h2`
+  font-family: "Mulish";
+`
+
+const StepsThumbnailsContainer = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+`
+
+const ThumbnailContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`
+
+const Thumbnail = styled.img`
+  width: 255px;
+  height: 210px;
+  border-radius: 3px;
+`
+
+const StepNumText = styled.p`
+  font-size: 1.2em;
+  font-family: "mulish";
+  font-weight: bold;
+  margin-bottom: 0;
+`
+const StepDirections = styled.p`
+  font-family: "mulish";
+  margin-top: 3px;
+`
+
 export default function Home() {
   useEffect(() => {
     document.title = `Expunge Assist Homepage`
@@ -348,6 +398,34 @@ export default function Home() {
           <LightPurpleBand />
         </PartnerMissionContainer>
       </PartnersContainer>
+
+      <HowItWorksSection>
+        <HowItWorksHeaderContainer>
+          <HowItWorksHeader>
+            How <span style={{ color: "#9903ff" }}>Expunge Assist</span> Works
+          </HowItWorksHeader>
+        </HowItWorksHeaderContainer>
+
+        <StepsThumbnailsContainer>
+          <ThumbnailContainer>
+            <Thumbnail src={step1} alt="" />
+            <StepNumText>Step 1 </StepNumText>
+            <StepDirections>
+              Head to <a href="https://expungeassist.org">expungeassist.org</a>
+            </StepDirections>
+          </ThumbnailContainer>
+          <ThumbnailContainer>
+            <Thumbnail src={step2} alt="" />
+            <StepNumText>Step 2</StepNumText>
+            <StepDirections>Fill out the prompts</StepDirections>
+          </ThumbnailContainer>
+          <ThumbnailContainer>
+            <Thumbnail src={step3} alt="" />
+            <StepNumText>Step 3</StepNumText>
+            <StepDirections>Generate a personal statement</StepDirections>
+          </ThumbnailContainer>
+        </StepsThumbnailsContainer>
+      </HowItWorksSection>
       <Footer />
     </AppContainer>
   )
