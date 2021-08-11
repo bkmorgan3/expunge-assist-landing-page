@@ -13,7 +13,7 @@ const AppContainer = styled.div`
 const GreetingContainer = styled.div`
   width: 100%;
   background-color: #fffaf2;
-  height: 550px;
+  height: 600px;
   display: flex;
 `
 
@@ -67,6 +67,16 @@ const PartnersContainer = styled.div`
   background-color: #fff;
 `
 
+const DemoButton = styled.button`
+  width: 144px;
+  height: 42px;
+  background-color: #9903ff;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 16px;
+  letter-spacing: 1px;
+`
+
 const PartnersFormSection = styled.div`
   width: 100%;
   height: 500px;
@@ -107,7 +117,7 @@ const WhyPartnersContainer = styled.div`
 const PartnerMissionContainer = styled.div`
   width: 100%;
   border: 1px solid blue;
-  height: 300px;
+  height: 500px;
 `
 
 const PurpledLetters = styled.span`
@@ -188,6 +198,7 @@ const PartnerHeaderContainer = styled.div`
   width: 100%;
   padding-top: 10px;
   margin-left: 80px;
+  margin-right: 30px;
 `
 
 const HeadOverTextContainer = styled.div`
@@ -198,7 +209,7 @@ const HeadOverTextContainer = styled.div`
 `
 
 const HorizontalYellowBand = styled.div`
-  width: 100%;
+  width: 50%;
   background-color: rgba(248, 203, 85, 0.66);
   height: 34px;
   margin-top: 240px;
@@ -210,7 +221,16 @@ const VerticalPurpleBand = styled.div`
   height: 480px;
   position: absolute;
   left: 440px;
-  top: 1044px;
+  top: 1093px;
+`
+
+const MissionCard = styled.div`
+  width: 600px;
+  height: 385px;
+  border: 8px solid rgba(153, 3, 255, 0.5);
+  border-radius: 8px;
+  margin-left: 120px;
+  background-color: #fffaf2;
 `
 
 export default function Home() {
@@ -235,6 +255,7 @@ export default function Home() {
                 people in California with criminal records accomplish record
                 clearance, expungement or reduction.
               </GreetingDescriptionText>
+              <DemoButton>View Demo</DemoButton>
             </GreetingDescriptionContainer>
           </GreetingHeader>
         </GreetingTextContainer>
@@ -288,14 +309,16 @@ export default function Home() {
               <PartnerFormText>Lorem Ipsum</PartnerFormText>
               <HeadOverTextContainer>
                 <PartnerTextAction>
-                  Head over to our about page to find out more about our <br /> goal to
-                  help improve the record clearance process.
+                  Head over to our about page to find out more about our <br />{" "}
+                  goal to help improve the record clearance process.
                 </PartnerTextAction>
               </HeadOverTextContainer>
             </WhyPartnerField>
           </WhyPartnerFieldContainer>
         </WhyPartnersContainer>
-        <PartnerMissionContainer></PartnerMissionContainer>
+        <PartnerMissionContainer>
+          <MissionCard></MissionCard>
+        </PartnerMissionContainer>
       </PartnersContainer>
       <Footer />
     </AppContainer>
