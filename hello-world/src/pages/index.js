@@ -116,8 +116,8 @@ const WhyPartnersContainer = styled.div`
 
 const PartnerMissionContainer = styled.div`
   width: 100%;
-  border: 1px solid blue;
-  height: 500px;
+  height: 600px;
+  position: relative;
 `
 
 const PurpledLetters = styled.span`
@@ -218,7 +218,7 @@ const HorizontalYellowBand = styled.div`
 const VerticalPurpleBand = styled.div`
   width: 34px;
   background-color: rgba(153, 3, 255, 0.5);
-  height: 480px;
+  height: 470px;
   position: absolute;
   left: 440px;
   top: 1093px;
@@ -231,6 +231,29 @@ const MissionCard = styled.div`
   border-radius: 8px;
   margin-left: 120px;
   background-color: #fffaf2;
+  z-index: 4;
+  position: absolute;
+`
+
+const OurMissionTextContainer = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  font-size: 1.6em;
+`
+const OurMissionText = styled.h2`
+  color: #9903ff;
+  font-family: "mulish";
+  margin-left: 50px;
+`
+
+const LightPurpleBand = styled.div`
+  width: 100%;
+  background-color: #f9f1ff;
+  height: 300px;
+  position: relative;
+  bottom: -160px;
+  z-index: 2;
 `
 
 export default function Home() {
@@ -317,7 +340,12 @@ export default function Home() {
           </WhyPartnerFieldContainer>
         </WhyPartnersContainer>
         <PartnerMissionContainer>
-          <MissionCard></MissionCard>
+          <MissionCard>
+            <OurMissionTextContainer>
+              <OurMissionText>Our Mission</OurMissionText>
+            </OurMissionTextContainer>
+          </MissionCard>
+          <LightPurpleBand />
         </PartnerMissionContainer>
       </PartnersContainer>
       <Footer />
