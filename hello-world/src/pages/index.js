@@ -120,7 +120,7 @@ const PartnerFormText = styled.p`
 `
 
 const PartnerTextAction = styled.span`
-  font-size: 0.9em;
+  font-size: 0.8em;
   margin-left: 50px;
 `
 
@@ -255,7 +255,7 @@ export default function Home() {
               <PartnerFormText>Lorem Ipsum</PartnerFormText>
               <PartnerFormText>Ipsum Lorem</PartnerFormText>
               <PartnerTextAction>
-                Sign up for more about becoming a partner and for project
+                Sign up for more info about becoming a partner and for project
                 updates.
               </PartnerTextAction>
               <Form action="#" method="POST">
