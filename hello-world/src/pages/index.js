@@ -288,7 +288,7 @@ export default function Home() {
               <PartnerFormText>Lorem Ipsum</PartnerFormText>
               <HeadOverTextContainer>
                 <PartnerTextAction>
-                  Head over to our about page to find out more about our goal to
+                  Head over to our about page to find out more about our <br /> goal to
                   help improve the record clearance process.
                 </PartnerTextAction>
               </HeadOverTextContainer>
