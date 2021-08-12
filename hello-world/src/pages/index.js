@@ -190,7 +190,7 @@ const WhyPartnerFieldContainer = styled.div`
 
 const WhyPartnerField = styled.div`
   border: 8px solid rgba(153, 3, 255, 0.5);
-  height: 374px;
+  height: 384px;
   background-color: #fffaf2;
   border-radius: 8px;
   width: 700px;
@@ -199,16 +199,15 @@ const WhyPartnerField = styled.div`
 
 const PartnerHeaderContainer = styled.div`
   width: 100%;
-  padding-top: 10px;
   margin-left: 80px;
   margin-right: 30px;
 `
 
 const HeadOverTextContainer = styled.div`
   width: 90%;
-  display: flex;
-  justify-content: center;
-  padding-left: 20px;
+  font-family: "mulish";
+  padding-left: 50px;
+  font-size: 0.9em;
 `
 
 const HorizontalYellowBand = styled.div`
@@ -229,7 +228,7 @@ const VerticalPurpleBand = styled.div`
 
 const MissionCard = styled.div`
   width: 600px;
-  height: 385px;
+  height: 335px;
   border: 8px solid rgba(153, 3, 255, 0.5);
   border-radius: 8px;
   margin-left: 120px;
@@ -244,10 +243,20 @@ const OurMissionTextContainer = styled.div`
   justify-content: flex-start;
   font-size: 1.6em;
 `
+
 const OurMissionText = styled.h2`
   color: #9903ff;
   font-family: "mulish";
   margin-left: 50px;
+`
+
+const MissionDescription = styled.p`
+  font-family: "mulish";
+  font-size: 1.3em;
+  letter-spacing: 1px;
+  line-height: 40px;
+  margin-left: 50px;
+  margin-right: 50px;
 `
 
 const LightPurpleBand = styled.div`
@@ -381,10 +390,12 @@ export default function Home() {
               <PartnerFormText>Lorem Ipsum</PartnerFormText>
               <PartnerFormText>Lorem Ipsum</PartnerFormText>
               <HeadOverTextContainer>
-                <PartnerTextAction>
-                  Head over to our about page to find out more about our <br />{" "}
-                  goal to help improve the record clearance process.
-                </PartnerTextAction>
+                Head over to our{" "}
+                <a href="/about">
+                  <b>About</b>
+                </a>{" "}
+                page to find out more about our goal to help improve the record
+                clearance process.
               </HeadOverTextContainer>
             </WhyPartnerField>
           </WhyPartnerFieldContainer>
@@ -394,6 +405,11 @@ export default function Home() {
             <OurMissionTextContainer>
               <OurMissionText>Our Mission</OurMissionText>
             </OurMissionTextContainer>
+            <MissionDescription>
+              Our mission is to help the 200,000+ residents of LA county who are
+              eligible for record clearance and help provide a{" "}
+              <b>second chance.</b>
+            </MissionDescription>
           </MissionCard>
           <LightPurpleBand />
         </PartnerMissionContainer>
