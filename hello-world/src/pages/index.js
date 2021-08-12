@@ -29,13 +29,14 @@ const GreetingImageContainer = styled.div`
   width: 50%;
 `
 
-const GreetingHeader = styled.p`
+const GreetingHeader = styled.div`
   font-family: "mulish";
   font-size: 2.2em;
   padding-left: 40px;
   font-weight: 800;
   line-height: 45px;
   letter-spacing: 1px;
+  margin-top: 50px;
 `
 const PurpleText = styled.span`
   font-family: "mulish";
@@ -58,10 +59,12 @@ const GreetingDescriptionContainer = styled.div`
 `
 
 const GreetingDescriptionText = styled.p`
-  font-size: 0.8em;
+  font-size: 1.2em;
   font-weight: normal;
   line-height: 40px;
-  letter-spacing: 0.7px;
+  letter-spacing: 0.8px;
+  font-family: "mulish";
+  margin-left: 50px;
 `
 
 const PartnersContainer = styled.div`
@@ -78,6 +81,8 @@ const DemoButton = styled.button`
   border-radius: 8px;
   font-size: 16px;
   letter-spacing: 1px;
+  border: none;
+  margin-left: 50px;
 `
 
 const PartnersFormSection = styled.div`
@@ -315,6 +320,11 @@ const StepDirections = styled.p`
   margin-top: 3px;
 `
 
+const handleDemoClick = () => {
+  console.log("moving stuff", window)
+  return (window.location.href = "https://expungeassist.org")
+}
+
 export default function Home() {
   useEffect(() => {
     document.title = `Expunge Assist Homepage`
@@ -331,15 +341,15 @@ export default function Home() {
               <PurpleText> Record Clearance </PurpleText>
               process by helping you generate a personal statement.
             </BoldHeaderContainer>
-            <GreetingDescriptionContainer>
-              <GreetingDescriptionText>
-                While still under development, Expunge Assist will aim to help
-                people in California with criminal records accomplish record
-                clearance, expungement or reduction.
-              </GreetingDescriptionText>
-              <DemoButton>View Demo</DemoButton>
-            </GreetingDescriptionContainer>
           </GreetingHeader>
+          <GreetingDescriptionContainer>
+            <GreetingDescriptionText>
+              While still under development, Expunge Assist will aim to help
+              people in California with criminal records accomplish record
+              clearance, expungement or reduction.
+            </GreetingDescriptionText>
+            <DemoButton onClick={() => handleDemoClick()}>View Demo</DemoButton>
+          </GreetingDescriptionContainer>
         </GreetingTextContainer>
         <GreetingImageContainer>
           <GreetingImage src={laptop} alt="" />
