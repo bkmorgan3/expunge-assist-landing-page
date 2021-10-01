@@ -20,6 +20,7 @@
     "gatsby": "^3.10.2",
     "gatsby-plugin-styled-components": "^4.10.0",
     "gatsby-plugin-web-font-loader": "^1.0.4",
+    "gatsby-source-google-sheets": "^1.1.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "styled-components": "^5.3.0"

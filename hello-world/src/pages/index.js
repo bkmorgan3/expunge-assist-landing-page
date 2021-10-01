@@ -1,22 +1,24 @@
-import React, { useEffect } from "react"
+import React, { useState, useEffect } from "react"
 import styled from "styled-components"
 import Nav from "../components/Nav"
 import Footer from "../components/Footer"
 
 import laptop from "../assets/images/laptop.png"
+import rocket from "../assets/images/RocketShip.svg"
 import step1 from "../assets/images/step1.png"
 import step2 from "../assets/images/step2.png"
 import step3 from "../assets/images/step3.png"
+import volunteers from "../assets/images/volunteers.svg"
 
 const AppContainer = styled.div`
-  width: 100%;
+  min-width: 100%;
   height: 100%;
 `
 
 const GreetingContainer = styled.div`
   width: 100%;
   background-color: #fffaf2;
-  height: 600px;
+  /* height: 600px; */
   display: flex;
 `
 
@@ -29,13 +31,14 @@ const GreetingImageContainer = styled.div`
   width: 50%;
 `
 
-const GreetingHeader = styled.p`
+const GreetingHeader = styled.div`
   font-family: "mulish";
   font-size: 2.2em;
   padding-left: 40px;
   font-weight: 800;
   line-height: 45px;
   letter-spacing: 1px;
+  margin-top: 50px;
 `
 const PurpleText = styled.span`
   font-family: "mulish";
@@ -58,10 +61,12 @@ const GreetingDescriptionContainer = styled.div`
 `
 
 const GreetingDescriptionText = styled.p`
-  font-size: 0.8em;
+  font-size: 1.2em;
   font-weight: normal;
   line-height: 40px;
-  letter-spacing: 0.7px;
+  letter-spacing: 0.8px;
+  font-family: "mulish";
+  margin-left: 50px;
 `
 
 const PartnersContainer = styled.div`
@@ -78,12 +83,15 @@ const DemoButton = styled.button`
   border-radius: 8px;
   font-size: 16px;
   letter-spacing: 1px;
+  border: none;
+  margin-left: 50px;
 `
 
 const PartnersFormSection = styled.div`
   width: 100%;
   height: 500px;
   display: flex;
+  position: relative;
 `
 
 const PartnerFormContainer = styled.div`
@@ -147,7 +155,7 @@ const Input = styled.input`
   border: 2px solid #000;
   background: #fff;
   height: 42px;
-  width: 447px;
+  width: ${props => props.width || "300px"};
   border-radius: 8px;
 `
 
@@ -177,11 +185,11 @@ const HorizontalPurpleBand = styled.div`
 `
 
 const VerticalYellowBand = styled.div`
-  width: 34px;
+  width: 84px;
   background-color: rgba(248, 203, 85, 0.66);
   height: 500px;
-  position: absolute;
-  left: 1000px;
+  position: relative;
+  right: 30%;
 `
 
 const WhyPartnerFieldContainer = styled.div`
@@ -263,9 +271,25 @@ const LightPurpleBand = styled.div`
   width: 100%;
   background-color: #f9f1ff;
   height: 300px;
+  z-index: -2;
   position: relative;
-  bottom: -160px;
+  bottom: 80%;
+`
+
+const PartnerLightPurpleBand = styled(LightPurpleBand)`
+  && {
+    position: relative;
+    bottom: -160px;
+  }
+`
+
+const RocketImage = styled.img`
+  width: 40%;
+  height: 500px;
   z-index: 2;
+  position: relative;
+  left: 50%;
+  bottom: 75%;
 `
 
 const HowItWorksSection = styled.div`
@@ -315,10 +339,74 @@ const StepDirections = styled.p`
   margin-top: 3px;
 `
 
+const VolunteerContainer = styled.div`
+  width: 100%;
+  height: 480px;
+  position: relative;
+`
+
+const VolunteerImage = styled.img`
+  width: 40%;
+  height: 100%;
+`
+
+const VolunteerCard = styled.div`
+  width: 600px;
+  height: 355px;
+  border: 8px solid rgba(245, 179, 4, 0.66);
+  border-radius: 8px;
+  margin-left: 55%;
+  background-color: #fffaf2;
+  z-index: 4;
+  position: absolute;
+  bottom: 12%;
+`
+
+const VolunteerHeadingContainer = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  font-size: 1.5em;
+  /* margin-top: 10px; */
+`
+
+const VolunteerCardHeader = styled.h2`
+  font-family: "mulish";
+  color: #9903ff;
+  margin-left: 50px;
+  font-weight: bold;
+`
+
+const VolunteerCardText = styled.p`
+  font-family: "mulish";
+  font-size: 1.3em;
+  letter-spacing: 1px;
+  line-height: 30px;
+  margin-left: 50px;
+  margin-right: 50px;
+`
+
 export default function Home() {
+  const [volunteerEmail, setVolunteerEmail] = useState("")
   useEffect(() => {
     document.title = `Expunge Assist Homepage`
   })
+
+  const handleDemoClick = () => {
+    return (window.location.href = "https://expungeassist.org")
+  }
+
+  const handleEmailChange = e => {
+    console.log("setting", e.target.value, "to", volunteerEmail)
+    setVolunteerEmail(e.target.value)
+  }
+
+  const handleFormSubmit = e => {
+    e.preventDefault()
+    setVolunteerEmail("")
+    console.log("VOLUNTEER", volunteerEmail)
+  }
+
   return (
     <AppContainer>
       <Nav />
@@ -331,15 +419,15 @@ export default function Home() {
               <PurpleText> Record Clearance </PurpleText>
               process by helping you generate a personal statement.
             </BoldHeaderContainer>
-            <GreetingDescriptionContainer>
-              <GreetingDescriptionText>
-                While still under development, Expunge Assist will aim to help
-                people in California with criminal records accomplish record
-                clearance, expungement or reduction.
-              </GreetingDescriptionText>
-              <DemoButton>View Demo</DemoButton>
-            </GreetingDescriptionContainer>
           </GreetingHeader>
+          <GreetingDescriptionContainer>
+            <GreetingDescriptionText>
+              While still under development, Expunge Assist will aim to help
+              people in California with criminal records accomplish record
+              clearance, expungement or reduction.
+            </GreetingDescriptionText>
+            <DemoButton onClick={() => handleDemoClick()}>View Demo</DemoButton>
+          </GreetingDescriptionContainer>
         </GreetingTextContainer>
         <GreetingImageContainer>
           <GreetingImage src={laptop} alt="" />
@@ -364,6 +452,7 @@ export default function Home() {
               <Form action="#" method="POST">
                 <Label htmlFor="signup"></Label>
                 <Input
+                  width="447px"
                   placeholder="yourname@domain.com"
                   name="signup"
                   type="email"
@@ -411,7 +500,8 @@ export default function Home() {
               <b>second chance.</b>
             </MissionDescription>
           </MissionCard>
-          <LightPurpleBand />
+          <PartnerLightPurpleBand />
+          <RocketImage src={rocket} alt="" />
         </PartnerMissionContainer>
       </PartnersContainer>
 
@@ -442,6 +532,33 @@ export default function Home() {
           </ThumbnailContainer>
         </StepsThumbnailsContainer>
       </HowItWorksSection>
+      <VolunteerContainer>
+        <VolunteerImage src={volunteers} alt="" />
+        <LightPurpleBand />
+        <VolunteerCard>
+          <VolunteerHeadingContainer>
+            <VolunteerCardHeader>Volunteer</VolunteerCardHeader>
+          </VolunteerHeadingContainer>
+          <VolunteerCardText>
+            We’re looking for members to join our dev team and support our
+            mission towards improve the record clearance process.  Sign up below
+            for more info.
+          </VolunteerCardText>
+          <Form onSubmit={handleFormSubmit}>
+            <Label htmlFor="volunteer"></Label>
+            <Input
+              placeholder="yourname@domain.com"
+              name="volunteer"
+              type="email"
+              value={volunteerEmail}
+              onChange={handleEmailChange}
+            ></Input>
+            <SubmitButton type="submit" onClick={handleFormSubmit}>
+              Submit
+            </SubmitButton>
+          </Form>
+        </VolunteerCard>
+      </VolunteerContainer>
       <Footer />
     </AppContainer>
   )
